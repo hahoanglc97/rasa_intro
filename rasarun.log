@@ -1,0 +1,1178 @@
+2022-09-21 15:05:52,720 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-09-21 15:05:52,721 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2022-09-21 15:05:52,721 [DEBUG]  Using the default number of Sanic workers (1).
+2022-09-21 15:05:53,093 [DEBUG]  Skipping request to external service: telemetry key not set.
+2022-09-21 15:05:53,216 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-09-21 15:05:53,216 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-09-21 15:05:53,216 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-09-21 15:05:53,216 [INFO ]  Loading model models/contact_bot.tar.gz...
+2022-09-21 15:05:53,510 [DEBUG]  Extracted model to '/var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmp0okjui3c'.
+2022-09-21 15:05:53,512 [DEBUG]  Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2022-09-21 15:05:53,512 [DEBUG]  Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2022-09-21 15:05:53,514 [DEBUG]  Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:05:53,514 [DEBUG]  Resource 'train_RegexFeaturizer1' was requested for reading.
+2022-09-21 15:05:53,514 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' loading 'LexicalSyntacticFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:05:53,514 [DEBUG]  Resource 'train_LexicalSyntacticFeaturizer2' was requested for reading.
+2022-09-21 15:05:53,515 [DEBUG]  Node 'run_CountVectorsFeaturizer3' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:05:53,515 [DEBUG]  Resource 'train_CountVectorsFeaturizer3' was requested for reading.
+2022-09-21 15:05:53,515 [DEBUG]  Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:05:53,515 [DEBUG]  Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2022-09-21 15:05:53,516 [DEBUG]  Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2022-09-21 15:05:53,516 [DEBUG]  Resource 'train_DIETClassifier5' was requested for reading.
+2022-09-21 15:05:53,517 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpn11mrxfa/train_DIETClassifier5/DIETClassifier.tf_model with finetune_mode=False...
+2022-09-21 15:05:53,555 [DEBUG]  Following metrics will be logged during training: 
+2022-09-21 15:05:53,555 [DEBUG]    t_loss (total loss)
+2022-09-21 15:05:53,555 [DEBUG]    i_acc (intent acc)
+2022-09-21 15:05:53,555 [DEBUG]    i_loss (intent loss)
+2022-09-21 15:05:53,556 [DEBUG]    e_f1 (entity f1)
+2022-09-21 15:05:53,556 [DEBUG]    e_loss (entity loss)
+2022-09-21 15:06:10,856 [DEBUG]  Finished loading the model.
+2022-09-21 15:06:10,856 [DEBUG]  Node 'run_EntitySynonymMapper6' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2022-09-21 15:06:10,856 [DEBUG]  Resource 'train_EntitySynonymMapper6' was requested for reading.
+2022-09-21 15:06:10,856 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_EntitySynonymMapper6' doesn't exist.
+2022-09-21 15:06:10,857 [DEBUG]  Node 'run_ResponseSelector7' loading 'ResponseSelector.load' and kwargs: '{}'.
+2022-09-21 15:06:10,857 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2022-09-21 15:06:10,857 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2022-09-21 15:06:10,857 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2022-09-21 15:06:10,857 [DEBUG]  Failed to load ResponseSelector from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2022-09-21 15:06:10,857 [DEBUG]  Node 'run_FallbackClassifier8' loading 'FallbackClassifier.load' and kwargs: '{}'.
+2022-09-21 15:06:10,857 [DEBUG]  Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2022-09-21 15:06:10,857 [DEBUG]  Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2022-09-21 15:06:10,857 [DEBUG]  Resource 'domain_provider' was requested for reading.
+2022-09-21 15:06:10,869 [DEBUG]  Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2022-09-21 15:06:10,869 [DEBUG]  Resource 'train_MemoizationPolicy0' was requested for reading.
+2022-09-21 15:06:10,870 [DEBUG]  Node 'run_RulePolicy1' loading 'RulePolicy.load' and kwargs: '{}'.
+2022-09-21 15:06:10,870 [DEBUG]  Resource 'train_RulePolicy1' was requested for reading.
+2022-09-21 15:06:10,870 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' loading 'UnexpecTEDIntentPolicy.load' and kwargs: '{}'.
+2022-09-21 15:06:10,870 [DEBUG]  Resource 'train_UnexpecTEDIntentPolicy2' was requested for reading.
+2022-09-21 15:06:10,870 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpn11mrxfa/train_UnexpecTEDIntentPolicy2/unexpected_intent_policy.tf_model with finetune_mode=False...
+2022-09-21 15:06:16,787 [DEBUG]  Finished loading the model.
+2022-09-21 15:06:16,787 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-09-21 15:06:16,787 [DEBUG]  Node 'run_TEDPolicy3' loading 'TEDPolicy.load' and kwargs: '{}'.
+2022-09-21 15:06:16,787 [DEBUG]  Resource 'train_TEDPolicy3' was requested for reading.
+2022-09-21 15:06:16,788 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpn11mrxfa/train_TEDPolicy3/ted_policy.tf_model with finetune_mode=False...
+2022-09-21 15:06:22,286 [DEBUG]  Finished loading the model.
+2022-09-21 15:06:22,286 [DEBUG]  Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2022-09-21 15:06:22,286 [DEBUG]  Resource 'train_RulePolicy1' was requested for reading.
+2022-09-21 15:06:22,286 [DEBUG]  Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2022-09-21 15:06:22,290 [INFO ]  Rasa server is up and running.
+2022-09-21 15:06:22,290 [INFO ]  Enabling coroutine debugging. Loop id 5642256400.
+2022-09-21 15:06:55,391 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:06:55,754 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:06:56,195 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:06:56,196 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:06:56,196 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:06:56,196 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:06:56,197 [DEBUG]  Could not find tracker for conversation ID '6151649334851647'.
+2022-09-21 15:06:56,197 [DEBUG]  Starting a new session for conversation ID '6151649334851647'.
+2022-09-21 15:06:56,200 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:06:56,200 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x2cd5aaf10>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2022-09-21 15:06:56,201 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:06:56,201 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x2bfbd6ca0>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:06:56,202 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:06:56,202 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:06:56,204 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:06:56,204 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:06:56,205 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:06:56,206 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:06:56,207 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:06:56,603 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:06:56,603 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:06:56,603 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:06:56,603 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:06:56,603 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:06:56,603 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:06:56,603 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:06:56,603 [DEBUG]  Received user message 'hey' with intent '{'name': 'greet', 'confidence': 0.9999957084655762}' and entities '[]'
+2022-09-21 15:06:56,603 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-09-21 15:06:56,604 [DEBUG]  Validating extracted slots: 
+2022-09-21 15:06:56,604 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 0 events: 
+2022-09-21 15:06:56,604 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2cd5aa5b0>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:06:56,604 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:06:56,604 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:06:56,604 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:06:56,604 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2022-09-21 15:06:56,604 [DEBUG]  There is a memorised next action 'utter_greet'
+2022-09-21 15:06:56,605 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:06:56,605 [DEBUG]  Current tracker state:
+[state 1] user text: hey | previous action name: action_listen
+2022-09-21 15:06:56,605 [DEBUG]  There is no applicable rule.
+2022-09-21 15:06:56,605 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2022-09-21 15:06:56,605 [DEBUG]  There is no applicable rule.
+2022-09-21 15:06:56,605 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:06:56,740 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2022-09-21 15:06:56,740 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:06:57,030 [DEBUG]  Querying for intent `greet`.
+2022-09-21 15:06:57,030 [DEBUG]  Score for intent `greet` is `0.33835819363594055`, while threshold is `0.09518927335739136`.
+2022-09-21 15:06:57,030 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('back', -1.6610557), ('restart', -1.5839336), ('supply_contact_info', -1.4727534), ('deny', -1.4246712), ('greet', 0.3383582)]`.
+2022-09-21 15:06:57,031 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:06:57,031 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:06:57,031 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:06:57,031 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:06:57,031 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-09-21 15:06:57,031 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x16e8eca30>]'.
+2022-09-21 15:06:57,031 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet"}, 1663747617.031497)]'.
+2022-09-21 15:06:58,033 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 139
+2022-09-21 15:06:58,035 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2cd5aa5b0>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:06:58,036 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:06:58,037 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:06:58,037 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:06:58,038 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2022-09-21 15:06:58,039 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:06:58,039 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:06:58,040 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2022-09-21 15:06:58,040 [DEBUG]  There is no applicable rule.
+2022-09-21 15:06:58,040 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:06:58,275 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:06:58,275 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:06:58,275 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:06:58,275 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:06:58,275 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:06:58,275 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:06:58,275 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:06:58,275 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:06:58,276 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:06:58,699 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:07:04,690 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:07:05,139 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:07:05,625 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:07:05,626 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:07:05,626 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:07:05,626 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:07:05,626 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:07:05,629 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x16e8ec820>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:07:05,630 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:07:05,630 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:07:05,630 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:07:05,631 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:07:05,631 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:07:05,632 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:07:05,633 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:07:05,702 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:07:05,702 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:07:05,702 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:07:05,702 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:07:05,702 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:07:05,702 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:07:05,702 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:07:05,702 [DEBUG]  Received user message 'booking' with intent '{'name': 'ask_service_booking', 'confidence': 0.9996891021728516}' and entities '[]'
+2022-09-21 15:07:05,703 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2022-09-21 15:07:05,703 [DEBUG]  Validating extracted slots: 
+2022-09-21 15:07:05,703 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 0 events: 
+2022-09-21 15:07:05,703 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x16e8ec6a0>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:07:05,703 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:07:05,703 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:07:05,703 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:07:05,703 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+2022-09-21 15:07:05,703 [DEBUG]  There is a memorised next action 'utter_ask_for_contact_info'
+2022-09-21 15:07:05,703 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:07:05,704 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: booking | previous action name: action_listen
+2022-09-21 15:07:05,704 [DEBUG]  There is no applicable rule.
+2022-09-21 15:07:05,704 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+2022-09-21 15:07:05,704 [DEBUG]  There is no applicable rule.
+2022-09-21 15:07:05,704 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:07:05,883 [DEBUG]  TED predicted 'utter_ask_for_contact_info' based on user intent.
+2022-09-21 15:07:05,883 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:07:06,043 [DEBUG]  Querying for intent `ask_service_booking`.
+2022-09-21 15:07:06,043 [DEBUG]  Score for intent `ask_service_booking` is `1.1671808958053589`, while threshold is `-0.6103218793869019`.
+2022-09-21 15:07:06,043 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('nlu_fallback', -0.84601605), ('greet', 0.09518945), ('mood_unhappy', 1.0118984), ('ask_service_booking', 1.1671809), ('mood_great', 2.027143)]`.
+2022-09-21 15:07:06,043 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:07:06,043 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:07:06,043 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:07:06,043 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:07:06,044 [DEBUG]  Predicted next action 'utter_ask_for_contact_info' with confidence 1.00.
+2022-09-21 15:07:06,044 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2e2692820>]'.
+2022-09-21 15:07:06,044 [DEBUG]  Action 'utter_ask_for_contact_info' ended with events '[BotUttered('Hello! Could you please provide your contact information?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_ask_for_contact_info"}, 1663747626.044214)]'.
+2022-09-21 15:07:06,754 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 139
+2022-09-21 15:07:06,756 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x16e8ec6a0>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:07:06,758 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:07:06,758 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:07:06,758 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:07:06,759 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:07:06,760 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:07:06,760 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:07:06,761 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:07:06,762 [DEBUG]  There is no applicable rule.
+2022-09-21 15:07:06,762 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:07:07,033 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:07:07,033 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:07:07,033 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:07:07,033 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:07:07,033 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:07:07,034 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:07:07,034 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:07:07,034 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:07:07,034 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:07:07,459 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:07:12,833 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:07:13,250 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:07:13,680 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:07:13,681 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:07:13,681 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:07:13,681 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:07:13,681 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:07:13,685 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x16e8ecee0>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:07:13,686 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:07:13,686 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:07:13,686 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:07:13,687 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:07:13,687 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:07:13,689 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:07:13,690 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:07:13,899 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:07:13,899 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:07:13,899 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:07:13,899 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:07:13,899 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:07:13,899 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:07:13,899 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:07:13,899 [DEBUG]  Received user message 'Ha, ha@email.com' with intent '{'name': 'supply_contact_info', 'confidence': 0.9995874762535095}' and entities '[{'entity': 'email', 'start': 4, 'end': 16, 'confidence_entity': 0.9891093969345093, 'value': 'ha@email.com', 'extractor': 'DIETClassifier'}]'
+2022-09-21 15:07:13,899 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:07:13,899 [DEBUG]  Logged UserUtterance - tracker now has 14 events.
+2022-09-21 15:07:13,900 [DEBUG]  Validating extracted slots: email
+2022-09-21 15:07:13,900 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 1 events: SlotSet(key: email, value: ha@email.com)
+2022-09-21 15:07:13,900 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2e2692040>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:07:13,900 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:07:13,900 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:07:13,900 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:07:13,900 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:07:13,900 [DEBUG]  There is no memorised next action
+2022-09-21 15:07:13,900 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:07:13,900 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user text: Ha, ha@email.com | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:07:13,900 [DEBUG]  There is no applicable rule.
+2022-09-21 15:07:13,901 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:07:13,901 [DEBUG]  There is no applicable rule.
+2022-09-21 15:07:13,901 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:07:13,956 [DEBUG]  TED predicted 'utter_acknowledge_provided_info' based on user intent.
+2022-09-21 15:07:13,956 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:07:14,072 [DEBUG]  Querying for intent `supply_contact_info`.
+2022-09-21 15:07:14,072 [DEBUG]  Score for intent `supply_contact_info` is `0.6204986572265625`, while threshold is `-0.5275957584381104`.
+2022-09-21 15:07:14,073 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('goodbye', -1.6329324), ('back', -1.5585563), ('affirm', -1.5228438), ('mood_great', -1.0642877), ('supply_contact_info', 0.62049866)]`.
+2022-09-21 15:07:14,073 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:07:14,073 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:07:14,073 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:07:14,073 [DEBUG]  Predicted next action using RulePolicy.
+2022-09-21 15:07:14,073 [DEBUG]  Predicted next action 'action_default_fallback' with confidence 0.30.
+2022-09-21 15:07:14,073 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2e269b670>]'.
+2022-09-21 15:07:14,073 [DEBUG]  Action 'action_default_fallback' ended with events '[<rasa.shared.core.events.UserUtteranceReverted object at 0x2e2692a00>]'.
+2022-09-21 15:07:14,073 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:07:14,073 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2e2692040>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:07:14,073 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:07:14,073 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:07:14,073 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:07:14,074 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:07:14,074 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:07:14,074 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:07:14,074 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:07:14,074 [DEBUG]  There is no applicable rule.
+2022-09-21 15:07:14,074 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:07:14,105 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:07:14,106 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:07:14,106 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:07:14,106 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:07:14,106 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:07:14,106 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:07:14,106 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:07:14,106 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:07:14,106 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:07:14,537 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:10:10,611 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:10:11,010 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:10:11,458 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:10:11,459 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:10:11,459 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:10:11,459 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:10:11,459 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:10:11,462 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x16e8bf340>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:10:11,463 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:10:11,463 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:10:11,463 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:10:11,463 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:10:11,463 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:10:11,464 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:10:11,464 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:10:11,522 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:10:11,522 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:10:11,522 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:10:11,522 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:10:11,522 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:10:11,522 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:10:11,522 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:10:11,522 [DEBUG]  Received user message 'Ha, ha@email.com' with intent '{'name': 'supply_contact_info', 'confidence': 0.9995874762535095}' and entities '[{'entity': 'email', 'start': 4, 'end': 16, 'confidence_entity': 0.9891093969345093, 'value': 'ha@email.com', 'extractor': 'DIETClassifier'}]'
+2022-09-21 15:10:11,522 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:10:11,522 [DEBUG]  Logged UserUtterance - tracker now has 20 events.
+2022-09-21 15:10:11,523 [DEBUG]  Validating extracted slots: email
+2022-09-21 15:10:11,523 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 1 events: SlotSet(key: email, value: ha@email.com)
+2022-09-21 15:10:11,523 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x16e8ec6a0>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:10:11,523 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:10:11,523 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:10:11,523 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,523 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:10:11,523 [DEBUG]  There is no memorised next action
+2022-09-21 15:10:11,524 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,524 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user text: Ha, ha@email.com | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:10:11,524 [DEBUG]  There is no applicable rule.
+2022-09-21 15:10:11,524 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:10:11,524 [DEBUG]  There is no applicable rule.
+2022-09-21 15:10:11,524 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,557 [DEBUG]  TED predicted 'utter_acknowledge_provided_info' based on user intent.
+2022-09-21 15:10:11,557 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,591 [DEBUG]  Querying for intent `supply_contact_info`.
+2022-09-21 15:10:11,591 [DEBUG]  Score for intent `supply_contact_info` is `0.6204986572265625`, while threshold is `-0.5275957584381104`.
+2022-09-21 15:10:11,591 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('goodbye', -1.6329324), ('back', -1.5585563), ('affirm', -1.5228438), ('mood_great', -1.0642877), ('supply_contact_info', 0.62049866)]`.
+2022-09-21 15:10:11,592 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:10:11,592 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:10:11,592 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:10:11,592 [DEBUG]  Predicted next action using RulePolicy.
+2022-09-21 15:10:11,592 [DEBUG]  Predicted next action 'action_default_fallback' with confidence 0.30.
+2022-09-21 15:10:11,592 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2e269bb20>]'.
+2022-09-21 15:10:11,592 [DEBUG]  Action 'action_default_fallback' ended with events '[<rasa.shared.core.events.UserUtteranceReverted object at 0x16e8ecb50>]'.
+2022-09-21 15:10:11,592 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:10:11,592 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x16e8ec6a0>}, targets: ['select_prediction'] and ExecutionContext(model_id='daa1cf18fd8f4bfd8fdef43874b3bf22', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:10:11,592 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:10:11,592 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:10:11,592 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,592 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:10:11,593 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:10:11,593 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,593 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:10:11,593 [DEBUG]  There is no applicable rule.
+2022-09-21 15:10:11,593 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,620 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:10:11,620 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:10:11,620 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:10:11,620 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:10:11,620 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:10:11,620 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:10:11,620 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:10:11,620 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:10:11,621 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:10:12,038 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:12:18,654 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-09-21 15:12:18,654 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2022-09-21 15:12:18,655 [DEBUG]  Using the default number of Sanic workers (1).
+2022-09-21 15:12:19,006 [DEBUG]  Skipping request to external service: telemetry key not set.
+2022-09-21 15:12:19,125 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-09-21 15:12:19,125 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-09-21 15:12:19,125 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-09-21 15:12:19,125 [INFO ]  Loading model models/contact_bot.tar.gz...
+2022-09-21 15:12:19,421 [DEBUG]  Extracted model to '/var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpgosd0ved'.
+2022-09-21 15:12:19,422 [DEBUG]  Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2022-09-21 15:12:19,422 [DEBUG]  Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2022-09-21 15:12:19,424 [DEBUG]  Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:12:19,424 [DEBUG]  Resource 'train_RegexFeaturizer1' was requested for reading.
+2022-09-21 15:12:19,424 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' loading 'LexicalSyntacticFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:12:19,424 [DEBUG]  Resource 'train_LexicalSyntacticFeaturizer2' was requested for reading.
+2022-09-21 15:12:19,425 [DEBUG]  Node 'run_CountVectorsFeaturizer3' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:12:19,425 [DEBUG]  Resource 'train_CountVectorsFeaturizer3' was requested for reading.
+2022-09-21 15:12:19,426 [DEBUG]  Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:12:19,426 [DEBUG]  Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2022-09-21 15:12:19,426 [DEBUG]  Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2022-09-21 15:12:19,426 [DEBUG]  Resource 'train_DIETClassifier5' was requested for reading.
+2022-09-21 15:12:19,427 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpd8mubwes/train_DIETClassifier5/DIETClassifier.tf_model with finetune_mode=False...
+2022-09-21 15:12:19,462 [DEBUG]  Following metrics will be logged during training: 
+2022-09-21 15:12:19,462 [DEBUG]    t_loss (total loss)
+2022-09-21 15:12:19,462 [DEBUG]    i_acc (intent acc)
+2022-09-21 15:12:19,462 [DEBUG]    i_loss (intent loss)
+2022-09-21 15:12:19,462 [DEBUG]    e_f1 (entity f1)
+2022-09-21 15:12:19,462 [DEBUG]    e_loss (entity loss)
+2022-09-21 15:12:36,442 [DEBUG]  Finished loading the model.
+2022-09-21 15:12:36,442 [DEBUG]  Node 'run_EntitySynonymMapper6' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2022-09-21 15:12:36,442 [DEBUG]  Resource 'train_EntitySynonymMapper6' was requested for reading.
+2022-09-21 15:12:36,442 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_EntitySynonymMapper6' doesn't exist.
+2022-09-21 15:12:36,442 [DEBUG]  Node 'run_ResponseSelector7' loading 'ResponseSelector.load' and kwargs: '{}'.
+2022-09-21 15:12:36,442 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2022-09-21 15:12:36,443 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2022-09-21 15:12:36,443 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2022-09-21 15:12:36,443 [DEBUG]  Failed to load ResponseSelector from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2022-09-21 15:12:36,443 [DEBUG]  Node 'run_FallbackClassifier8' loading 'FallbackClassifier.load' and kwargs: '{}'.
+2022-09-21 15:12:36,443 [DEBUG]  Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2022-09-21 15:12:36,443 [DEBUG]  Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2022-09-21 15:12:36,443 [DEBUG]  Resource 'domain_provider' was requested for reading.
+2022-09-21 15:12:36,454 [DEBUG]  Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2022-09-21 15:12:36,454 [DEBUG]  Resource 'train_MemoizationPolicy0' was requested for reading.
+2022-09-21 15:12:36,454 [DEBUG]  Node 'run_RulePolicy1' loading 'RulePolicy.load' and kwargs: '{}'.
+2022-09-21 15:12:36,454 [DEBUG]  Resource 'train_RulePolicy1' was requested for reading.
+2022-09-21 15:12:36,455 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' loading 'UnexpecTEDIntentPolicy.load' and kwargs: '{}'.
+2022-09-21 15:12:36,455 [DEBUG]  Resource 'train_UnexpecTEDIntentPolicy2' was requested for reading.
+2022-09-21 15:12:36,455 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpd8mubwes/train_UnexpecTEDIntentPolicy2/unexpected_intent_policy.tf_model with finetune_mode=False...
+2022-09-21 15:12:42,356 [DEBUG]  Finished loading the model.
+2022-09-21 15:12:42,356 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-09-21 15:12:42,356 [DEBUG]  Node 'run_TEDPolicy3' loading 'TEDPolicy.load' and kwargs: '{}'.
+2022-09-21 15:12:42,356 [DEBUG]  Resource 'train_TEDPolicy3' was requested for reading.
+2022-09-21 15:12:42,357 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmpd8mubwes/train_TEDPolicy3/ted_policy.tf_model with finetune_mode=False...
+2022-09-21 15:12:47,858 [DEBUG]  Finished loading the model.
+2022-09-21 15:12:47,858 [DEBUG]  Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2022-09-21 15:12:47,858 [DEBUG]  Resource 'train_RulePolicy1' was requested for reading.
+2022-09-21 15:12:47,859 [DEBUG]  Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2022-09-21 15:12:47,862 [INFO ]  Rasa server is up and running.
+2022-09-21 15:12:47,863 [INFO ]  Enabling coroutine debugging. Loop id 5237112848.
+2022-09-21 15:14:49,329 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:14:49,879 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:14:50,309 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:14:50,310 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:14:50,310 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:14:50,311 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:14:50,311 [DEBUG]  Could not find tracker for conversation ID '6151649334851647'.
+2022-09-21 15:14:50,311 [DEBUG]  Starting a new session for conversation ID '6151649334851647'.
+2022-09-21 15:14:50,313 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:14:50,314 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x152c1ef40>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2022-09-21 15:14:50,314 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:14:50,314 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x2c862ddc0>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:14:50,315 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:14:50,315 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:14:50,318 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:14:50,318 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:14:50,318 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:14:50,320 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:14:50,321 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:14:50,706 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:14:50,706 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:14:50,706 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:14:50,706 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:14:50,706 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:14:50,706 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:14:50,706 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:14:50,706 [DEBUG]  Received user message 'hey' with intent '{'name': 'greet', 'confidence': 0.9999957084655762}' and entities '[]'
+2022-09-21 15:14:50,707 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-09-21 15:14:50,707 [DEBUG]  Validating extracted slots: 
+2022-09-21 15:14:50,707 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 0 events: 
+2022-09-21 15:14:50,707 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x152c1e190>}, targets: ['select_prediction'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:14:50,707 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:14:50,707 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:14:50,707 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:14:50,708 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2022-09-21 15:14:50,708 [DEBUG]  There is a memorised next action 'utter_greet'
+2022-09-21 15:14:50,708 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:14:50,708 [DEBUG]  Current tracker state:
+[state 1] user text: hey | previous action name: action_listen
+2022-09-21 15:14:50,708 [DEBUG]  There is no applicable rule.
+2022-09-21 15:14:50,708 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2022-09-21 15:14:50,708 [DEBUG]  There is no applicable rule.
+2022-09-21 15:14:50,708 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:14:50,843 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2022-09-21 15:14:50,843 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:14:51,125 [DEBUG]  Querying for intent `greet`.
+2022-09-21 15:14:51,125 [DEBUG]  Score for intent `greet` is `0.33835819363594055`, while threshold is `0.09518927335739136`.
+2022-09-21 15:14:51,125 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('back', -1.6610557), ('restart', -1.5839336), ('supply_contact_info', -1.4727534), ('deny', -1.4246712), ('greet', 0.3383582)]`.
+2022-09-21 15:14:51,125 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:14:51,125 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:14:51,125 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:14:51,125 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:14:51,126 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-09-21 15:14:51,126 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2b7ed4160>]'.
+2022-09-21 15:14:51,126 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet"}, 1663748091.126285)]'.
+2022-09-21 15:14:52,302 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 139
+2022-09-21 15:14:52,302 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x152c1e190>}, targets: ['select_prediction'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:14:52,303 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:14:52,303 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:14:52,303 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:14:52,304 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2022-09-21 15:14:52,304 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:14:52,304 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:14:52,305 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2022-09-21 15:14:52,305 [DEBUG]  There is no applicable rule.
+2022-09-21 15:14:52,305 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:14:52,565 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:14:52,565 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:14:52,565 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:14:52,565 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:14:52,565 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:14:52,565 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:14:52,566 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:14:52,566 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:14:52,566 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:14:53,086 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:15:15,418 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:15:15,853 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:15:16,289 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:15:16,290 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:15:16,290 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:15:16,290 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:15:16,291 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:15:16,293 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x2c862dc70>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:15:16,294 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:15:16,294 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:15:16,295 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:15:16,295 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:15:16,295 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:15:16,296 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:15:16,297 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:15:16,353 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:15:16,353 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:15:16,353 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:15:16,353 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:15:16,353 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:15:16,354 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:15:16,354 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:15:16,354 [DEBUG]  Received user message 'booking' with intent '{'name': 'ask_service_booking', 'confidence': 0.9996891021728516}' and entities '[]'
+2022-09-21 15:15:16,354 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2022-09-21 15:15:16,354 [DEBUG]  Validating extracted slots: 
+2022-09-21 15:15:16,354 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 0 events: 
+2022-09-21 15:15:16,354 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2b7ed49d0>}, targets: ['select_prediction'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:15:16,354 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:15:16,354 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:15:16,354 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:15:16,354 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+2022-09-21 15:15:16,354 [DEBUG]  There is a memorised next action 'utter_ask_for_contact_info'
+2022-09-21 15:15:16,355 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:15:16,355 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: booking | previous action name: action_listen
+2022-09-21 15:15:16,355 [DEBUG]  There is no applicable rule.
+2022-09-21 15:15:16,355 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+2022-09-21 15:15:16,355 [DEBUG]  There is no applicable rule.
+2022-09-21 15:15:16,355 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:15:16,490 [DEBUG]  TED predicted 'utter_ask_for_contact_info' based on user intent.
+2022-09-21 15:15:16,490 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:15:16,633 [DEBUG]  Querying for intent `ask_service_booking`.
+2022-09-21 15:15:16,634 [DEBUG]  Score for intent `ask_service_booking` is `1.1671808958053589`, while threshold is `-0.6103218793869019`.
+2022-09-21 15:15:16,634 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('nlu_fallback', -0.84601605), ('greet', 0.09518945), ('mood_unhappy', 1.0118984), ('ask_service_booking', 1.1671809), ('mood_great', 2.027143)]`.
+2022-09-21 15:15:16,634 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:15:16,634 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:15:16,634 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:15:16,634 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:15:16,634 [DEBUG]  Predicted next action 'utter_ask_for_contact_info' with confidence 1.00.
+2022-09-21 15:15:16,634 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2cf2b9280>]'.
+2022-09-21 15:15:16,634 [DEBUG]  Action 'utter_ask_for_contact_info' ended with events '[BotUttered('Hello! Could you please provide your contact information?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_ask_for_contact_info"}, 1663748116.634625)]'.
+2022-09-21 15:15:17,757 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 139
+2022-09-21 15:15:17,759 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2b7ed49d0>}, targets: ['select_prediction'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:15:17,760 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:15:17,760 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:15:17,760 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:15:17,761 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:15:17,762 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:15:17,762 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:15:17,762 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:15:17,763 [DEBUG]  There is no applicable rule.
+2022-09-21 15:15:17,763 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:15:17,927 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:15:17,927 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:15:17,927 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:15:17,928 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:15:17,928 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:15:17,928 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:15:17,928 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:15:17,928 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:15:17,928 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:15:18,360 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:15:29,164 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:15:29,631 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:15:30,158 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:15:30,159 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:15:30,159 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:15:30,159 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:15:30,159 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:15:30,163 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x2c862dd90>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:15:30,164 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:15:30,164 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:15:30,165 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:15:30,165 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:15:30,166 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:15:30,167 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:15:30,168 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:15:30,402 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:15:30,402 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:15:30,402 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:15:30,402 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:15:30,402 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:15:30,402 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:15:30,402 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:15:30,402 [DEBUG]  Received user message 'Ha, ha@email.com' with intent '{'name': 'supply_contact_info', 'confidence': 0.9995874762535095}' and entities '[{'entity': 'email', 'start': 4, 'end': 16, 'confidence_entity': 0.9891093969345093, 'value': 'ha@email.com', 'extractor': 'DIETClassifier'}]'
+2022-09-21 15:15:30,402 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:15:30,402 [DEBUG]  Logged UserUtterance - tracker now has 14 events.
+2022-09-21 15:15:30,402 [DEBUG]  Validating extracted slots: email
+2022-09-21 15:15:30,402 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 1 events: SlotSet(key: email, value: ha@email.com)
+2022-09-21 15:15:30,402 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2b7ed4d60>}, targets: ['select_prediction'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:15:30,403 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:15:30,403 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:15:30,403 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,403 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:15:30,403 [DEBUG]  There is no memorised next action
+2022-09-21 15:15:30,403 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,403 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user text: Ha, ha@email.com | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:15:30,403 [DEBUG]  There is no applicable rule.
+2022-09-21 15:15:30,403 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:15:30,403 [DEBUG]  There is no applicable rule.
+2022-09-21 15:15:30,403 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,458 [DEBUG]  TED predicted 'utter_acknowledge_provided_info' based on user intent.
+2022-09-21 15:15:30,458 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,582 [DEBUG]  Querying for intent `supply_contact_info`.
+2022-09-21 15:15:30,582 [DEBUG]  Score for intent `supply_contact_info` is `0.6204986572265625`, while threshold is `-0.5275957584381104`.
+2022-09-21 15:15:30,582 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('goodbye', -1.6329324), ('back', -1.5585563), ('affirm', -1.5228438), ('mood_great', -1.0642877), ('supply_contact_info', 0.62049866)]`.
+2022-09-21 15:15:30,583 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:15:30,583 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:15:30,583 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:15:30,583 [DEBUG]  Predicted next action using RulePolicy.
+2022-09-21 15:15:30,583 [DEBUG]  Predicted next action 'action_default_fallback' with confidence 0.30.
+2022-09-21 15:15:30,583 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2cf2b9670>]'.
+2022-09-21 15:15:30,583 [DEBUG]  Action 'action_default_fallback' ended with events '[<rasa.shared.core.events.UserUtteranceReverted object at 0x2b7ed4b80>]'.
+2022-09-21 15:15:30,583 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:15:30,583 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2b7ed4d60>}, targets: ['select_prediction'] and ExecutionContext(model_id='f70600b4faaa439eaa0546e84594c512', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:15:30,583 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:15:30,583 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:15:30,583 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,583 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:15:30,584 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:15:30,584 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,584 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:15:30,584 [DEBUG]  There is no applicable rule.
+2022-09-21 15:15:30,584 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,612 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:15:30,612 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:15:30,612 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:15:30,612 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:15:30,612 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:15:30,612 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:15:30,613 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:15:30,613 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:15:30,613 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:15:31,163 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:24:48,999 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-09-21 15:24:49,000 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2022-09-21 15:24:49,000 [DEBUG]  Using the default number of Sanic workers (1).
+2022-09-21 15:24:49,354 [DEBUG]  Skipping request to external service: telemetry key not set.
+2022-09-21 15:24:49,474 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-09-21 15:24:49,474 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-09-21 15:24:49,474 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-09-21 15:24:49,475 [INFO ]  Loading model models/contact_bot.tar.gz...
+2022-09-21 15:24:49,778 [DEBUG]  Extracted model to '/var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmp8_2s28bp'.
+2022-09-21 15:24:49,780 [DEBUG]  Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2022-09-21 15:24:49,780 [DEBUG]  Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2022-09-21 15:24:49,782 [DEBUG]  Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:24:49,782 [DEBUG]  Resource 'train_RegexFeaturizer1' was requested for reading.
+2022-09-21 15:24:49,782 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' loading 'LexicalSyntacticFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:24:49,782 [DEBUG]  Resource 'train_LexicalSyntacticFeaturizer2' was requested for reading.
+2022-09-21 15:24:49,783 [DEBUG]  Node 'run_CountVectorsFeaturizer3' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:24:49,783 [DEBUG]  Resource 'train_CountVectorsFeaturizer3' was requested for reading.
+2022-09-21 15:24:49,784 [DEBUG]  Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2022-09-21 15:24:49,784 [DEBUG]  Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2022-09-21 15:24:49,785 [DEBUG]  Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2022-09-21 15:24:49,785 [DEBUG]  Resource 'train_DIETClassifier5' was requested for reading.
+2022-09-21 15:24:49,785 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmp2ck19h7p/train_DIETClassifier5/DIETClassifier.tf_model with finetune_mode=False...
+2022-09-21 15:24:49,824 [DEBUG]  Following metrics will be logged during training: 
+2022-09-21 15:24:49,824 [DEBUG]    t_loss (total loss)
+2022-09-21 15:24:49,824 [DEBUG]    i_acc (intent acc)
+2022-09-21 15:24:49,824 [DEBUG]    i_loss (intent loss)
+2022-09-21 15:24:49,824 [DEBUG]    e_f1 (entity f1)
+2022-09-21 15:24:49,824 [DEBUG]    e_loss (entity loss)
+2022-09-21 15:25:07,339 [DEBUG]  Finished loading the model.
+2022-09-21 15:25:07,339 [DEBUG]  Node 'run_EntitySynonymMapper6' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2022-09-21 15:25:07,339 [DEBUG]  Resource 'train_EntitySynonymMapper6' was requested for reading.
+2022-09-21 15:25:07,339 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_EntitySynonymMapper6' doesn't exist.
+2022-09-21 15:25:07,339 [DEBUG]  Node 'run_ResponseSelector7' loading 'ResponseSelector.load' and kwargs: '{}'.
+2022-09-21 15:25:07,339 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2022-09-21 15:25:07,339 [DEBUG]  Failed to load ABCMeta from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2022-09-21 15:25:07,339 [DEBUG]  Resource 'train_ResponseSelector7' was requested for reading.
+2022-09-21 15:25:07,339 [DEBUG]  Failed to load ResponseSelector from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2022-09-21 15:25:07,339 [DEBUG]  Node 'run_FallbackClassifier8' loading 'FallbackClassifier.load' and kwargs: '{}'.
+2022-09-21 15:25:07,339 [DEBUG]  Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2022-09-21 15:25:07,339 [DEBUG]  Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2022-09-21 15:25:07,339 [DEBUG]  Resource 'domain_provider' was requested for reading.
+2022-09-21 15:25:07,351 [DEBUG]  Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2022-09-21 15:25:07,351 [DEBUG]  Resource 'train_MemoizationPolicy0' was requested for reading.
+2022-09-21 15:25:07,351 [DEBUG]  Node 'run_RulePolicy1' loading 'RulePolicy.load' and kwargs: '{}'.
+2022-09-21 15:25:07,351 [DEBUG]  Resource 'train_RulePolicy1' was requested for reading.
+2022-09-21 15:25:07,351 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' loading 'UnexpecTEDIntentPolicy.load' and kwargs: '{}'.
+2022-09-21 15:25:07,351 [DEBUG]  Resource 'train_UnexpecTEDIntentPolicy2' was requested for reading.
+2022-09-21 15:25:07,352 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmp2ck19h7p/train_UnexpecTEDIntentPolicy2/unexpected_intent_policy.tf_model with finetune_mode=False...
+2022-09-21 15:25:14,980 [DEBUG]  Finished loading the model.
+2022-09-21 15:25:14,980 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-09-21 15:25:14,980 [DEBUG]  Node 'run_TEDPolicy3' loading 'TEDPolicy.load' and kwargs: '{}'.
+2022-09-21 15:25:14,980 [DEBUG]  Resource 'train_TEDPolicy3' was requested for reading.
+2022-09-21 15:25:14,981 [DEBUG]  Loading the model from /var/folders/y8/snwjrj_d75v27837y00p3vk80000gn/T/tmp2ck19h7p/train_TEDPolicy3/ted_policy.tf_model with finetune_mode=False...
+2022-09-21 15:25:21,869 [DEBUG]  Finished loading the model.
+2022-09-21 15:25:21,870 [DEBUG]  Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2022-09-21 15:25:21,870 [DEBUG]  Resource 'train_RulePolicy1' was requested for reading.
+2022-09-21 15:25:21,870 [DEBUG]  Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2022-09-21 15:25:21,873 [INFO ]  Rasa server is up and running.
+2022-09-21 15:25:21,874 [INFO ]  Enabling coroutine debugging. Loop id 5109547024.
+2022-09-21 15:25:27,709 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:25:28,112 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:28,533 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:28,534 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:25:28,534 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:25:28,534 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:25:28,534 [DEBUG]  Could not find tracker for conversation ID '6151649334851647'.
+2022-09-21 15:25:28,535 [DEBUG]  Starting a new session for conversation ID '6151649334851647'.
+2022-09-21 15:25:28,537 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:25:28,537 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x2d2e2ceb0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2022-09-21 15:25:28,537 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:25:28,538 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x2bd664190>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:28,538 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:25:28,539 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:25:28,540 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:25:28,540 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:25:28,540 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:25:28,541 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:25:28,542 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:25:28,973 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:25:28,974 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:25:28,974 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:25:28,974 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:25:28,974 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:25:28,974 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:28,974 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:25:28,974 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9999834299087524}' and entities '[]'
+2022-09-21 15:25:28,974 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2022-09-21 15:25:28,975 [DEBUG]  Validating extracted slots: 
+2022-09-21 15:25:28,975 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 0 events: 
+2022-09-21 15:25:28,975 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2d2e2cbb0>}, targets: ['select_prediction'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:28,975 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:25:28,975 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:28,975 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:25:28,975 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2022-09-21 15:25:28,975 [DEBUG]  There is a memorised next action 'utter_greet'
+2022-09-21 15:25:28,975 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:25:28,975 [DEBUG]  Current tracker state:
+[state 1] user text: hi | previous action name: action_listen
+2022-09-21 15:25:28,975 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:28,975 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2022-09-21 15:25:28,975 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:28,976 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:25:29,111 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2022-09-21 15:25:29,111 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:25:29,455 [DEBUG]  Querying for intent `greet`.
+2022-09-21 15:25:29,455 [DEBUG]  Score for intent `greet` is `1.189080834388733`, while threshold is `0.039016589522361755`.
+2022-09-21 15:25:29,455 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('deny', -1.8737135), ('mood_unhappy', -1.7015419), ('goodbye', -1.4093887), ('supply_contact_info', -0.9037645), ('greet', 1.1890808)]`.
+2022-09-21 15:25:29,455 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:25:29,455 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:25:29,455 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:25:29,455 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:25:29,456 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2022-09-21 15:25:29,456 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x16ed0b5e0>]'.
+2022-09-21 15:25:29,456 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet"}, 1663748729.456316)]'.
+2022-09-21 15:25:30,264 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 139
+2022-09-21 15:25:30,275 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x2d2e2cbb0>}, targets: ['select_prediction'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:30,276 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:25:30,277 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:30,277 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:25:30,278 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2022-09-21 15:25:30,279 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:25:30,279 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:25:30,279 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2022-09-21 15:25:30,279 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:30,279 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:25:30,447 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:25:30,447 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:25:30,447 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:25:30,448 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:25:30,448 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:25:30,448 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:25:30,448 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:25:30,448 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:25:30,448 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:25:30,874 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:34,457 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:25:34,910 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:35,369 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:35,370 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:25:35,370 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:25:35,370 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:25:35,370 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:25:35,372 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x2d2e2cf10>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:35,372 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:25:35,373 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:25:35,373 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:25:35,373 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:25:35,373 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:25:35,375 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:25:35,376 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:25:35,450 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:25:35,450 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:25:35,450 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:25:35,450 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:25:35,450 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:25:35,451 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:35,451 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:25:35,451 [DEBUG]  Received user message 'booking' with intent '{'name': 'ask_service_booking', 'confidence': 0.9996668100357056}' and entities '[]'
+2022-09-21 15:25:35,451 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2022-09-21 15:25:35,451 [DEBUG]  Validating extracted slots: 
+2022-09-21 15:25:35,451 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 0 events: 
+2022-09-21 15:25:35,451 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x17c6ab910>}, targets: ['select_prediction'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:35,451 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:25:35,451 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:35,451 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:25:35,451 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+2022-09-21 15:25:35,452 [DEBUG]  There is a memorised next action 'utter_ask_for_contact_info'
+2022-09-21 15:25:35,452 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:25:35,452 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: booking | previous action name: action_listen
+2022-09-21 15:25:35,452 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:35,452 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+2022-09-21 15:25:35,452 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:35,452 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:25:35,584 [DEBUG]  TED predicted 'utter_ask_for_contact_info' based on user intent.
+2022-09-21 15:25:35,584 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:25:35,710 [DEBUG]  Querying for intent `ask_service_booking`.
+2022-09-21 15:25:35,710 [DEBUG]  Score for intent `ask_service_booking` is `1.1801493167877197`, while threshold is `-1.2046133279800415`.
+2022-09-21 15:25:35,710 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('deny', -0.8431525), ('restart', -0.50361466), ('mood_unhappy', 0.8048264), ('ask_service_booking', 1.1801493), ('mood_great', 1.5389793)]`.
+2022-09-21 15:25:35,710 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:25:35,710 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:25:35,710 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:25:35,710 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:25:35,711 [DEBUG]  Predicted next action 'utter_ask_for_contact_info' with confidence 1.00.
+2022-09-21 15:25:35,711 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x16ed0b790>]'.
+2022-09-21 15:25:35,711 [DEBUG]  Action 'utter_ask_for_contact_info' ended with events '[BotUttered('Hello! Could you please provide your contact information?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_ask_for_contact_info"}, 1663748735.7111738)]'.
+2022-09-21 15:25:36,487 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 139
+2022-09-21 15:25:36,489 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x17c6ab910>}, targets: ['select_prediction'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:36,490 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:25:36,491 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:36,491 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:25:36,492 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:25:36,493 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:25:36,493 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:25:36,494 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:25:36,494 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:36,494 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:25:36,693 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:25:36,693 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:25:36,693 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:25:36,693 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:25:36,693 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:25:36,693 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:25:36,694 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:25:36,694 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:25:36,694 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:25:37,126 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:42,215 [DEBUG]  Starting new HTTPS connection (1): graph.facebook.com:443
+2022-09-21 15:25:43,024 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:43,531 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
+2022-09-21 15:25:43,532 [DEBUG]  Issuing ticket for conversation '6151649334851647'.
+2022-09-21 15:25:43,532 [DEBUG]  Acquiring lock for conversation '6151649334851647'.
+2022-09-21 15:25:43,532 [DEBUG]  Acquired lock for conversation '6151649334851647'.
+2022-09-21 15:25:43,533 [DEBUG]  Recreating tracker for id '6151649334851647'
+2022-09-21 15:25:43,536 [DEBUG]  Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x17c6ab550>]}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:43,537 [DEBUG]  Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2022-09-21 15:25:43,537 [DEBUG]  Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2022-09-21 15:25:43,537 [DEBUG]  Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2022-09-21 15:25:43,537 [DEBUG]  Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2022-09-21 15:25:43,538 [DEBUG]  Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:25:43,539 [DEBUG]  Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2022-09-21 15:25:43,540 [DEBUG]  Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2022-09-21 15:25:43,757 [DEBUG]  Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2022-09-21 15:25:43,757 [DEBUG]  Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2022-09-21 15:25:43,757 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2022-09-21 15:25:43,757 [DEBUG]  Adding following selector key to message property: default
+2022-09-21 15:25:43,757 [DEBUG]  Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2022-09-21 15:25:43,758 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:43,758 [DEBUG]  Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2022-09-21 15:25:43,758 [DEBUG]  Received user message 'Ha, ha@email.com' with intent '{'name': 'supply_contact_info', 'confidence': 0.9996488094329834}' and entities '[{'entity': 'email', 'start': 4, 'end': 16, 'confidence_entity': 0.9934191703796387, 'value': 'ha@email.com', 'extractor': 'DIETClassifier'}]'
+2022-09-21 15:25:43,758 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:25:43,758 [DEBUG]  Logged UserUtterance - tracker now has 14 events.
+2022-09-21 15:25:43,758 [DEBUG]  Validating extracted slots: email
+2022-09-21 15:25:43,758 [DEBUG]  Default action 'action_extract_slots' was executed, resulting in 1 events: SlotSet(key: email, value: ha@email.com)
+2022-09-21 15:25:43,758 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x17c6aba00>}, targets: ['select_prediction'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:43,758 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:25:43,758 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:43,758 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:25:43,758 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:25:43,759 [DEBUG]  There is no memorised next action
+2022-09-21 15:25:43,759 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:25:43,759 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user text: Ha, ha@email.com | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:25:43,759 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:43,759 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+[state 5] user intent: supply_contact_info | user entities: ('email',) | previous action name: action_listen | slots: {'email': (1.0,)}
+2022-09-21 15:25:43,759 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:43,759 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:25:43,839 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2022-09-21 15:25:43,839 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:25:43,968 [DEBUG]  Querying for intent `supply_contact_info`.
+2022-09-21 15:25:43,968 [DEBUG]  Score for intent `supply_contact_info` is `1.0278066396713257`, while threshold is `-0.9037643074989319`.
+2022-09-21 15:25:43,968 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('mood_great', -1.5066979), ('ask_service_booking', -1.2046133), ('out_of_scope', -1.0973103), ('greet', -0.8097329), ('supply_contact_info', 1.0278066)]`.
+2022-09-21 15:25:43,968 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:25:43,968 [DEBUG]  Made prediction using user intent.
+2022-09-21 15:25:43,968 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2022-09-21 15:25:43,968 [DEBUG]  Predicted next action using RulePolicy.
+2022-09-21 15:25:43,968 [DEBUG]  Predicted next action 'action_default_fallback' with confidence 0.30.
+2022-09-21 15:25:43,968 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x2d94c4dc0>]'.
+2022-09-21 15:25:43,968 [DEBUG]  Action 'action_default_fallback' ended with events '[<rasa.shared.core.events.UserUtteranceReverted object at 0x17c6abbb0>]'.
+2022-09-21 15:25:43,968 [DEBUG]  Current slot values: 
+	name: None
+	email: None
+	session_started_metadata: None
+2022-09-21 15:25:43,969 [DEBUG]  Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x17c6aba00>}, targets: ['select_prediction'] and ExecutionContext(model_id='b875e9d026c1480fa51b53cd84108141', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2022-09-21 15:25:43,969 [DEBUG]  Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2022-09-21 15:25:43,969 [DEBUG]  Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2022-09-21 15:25:43,969 [DEBUG]  Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2022-09-21 15:25:43,969 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:25:43,969 [DEBUG]  There is a memorised next action 'action_listen'
+2022-09-21 15:25:43,969 [DEBUG]  Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2022-09-21 15:25:43,969 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_service_booking | previous action name: action_listen
+[state 4] user intent: ask_service_booking | previous action name: utter_ask_for_contact_info
+2022-09-21 15:25:43,969 [DEBUG]  There is no applicable rule.
+2022-09-21 15:25:43,969 [DEBUG]  Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2022-09-21 15:25:44,000 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2022-09-21 15:25:44,001 [DEBUG]  Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2022-09-21 15:25:44,001 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2022-09-21 15:25:44,001 [DEBUG]  Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2022-09-21 15:25:44,001 [DEBUG]  Predicted next action using MemoizationPolicy.
+2022-09-21 15:25:44,001 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2022-09-21 15:25:44,001 [DEBUG]  Policy prediction ended with events '[]'.
+2022-09-21 15:25:44,001 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2022-09-21 15:25:44,001 [DEBUG]  Deleted lock for conversation '6151649334851647'.
+2022-09-21 15:25:44,765 [DEBUG]  https://graph.facebook.com:443 "POST /v2.12/me/messages?access_token=EAAFzWij028MBAC3wv8cZAqkbseRZAxWNZAcurGaOTmk2gZCz1hH7UoBtaFLyduprDj0aUTxFf8ar9IDKOubDLkE25ItWYGMLx7YsqOCPbCEegRJT03oSwnttz7IbSqFOvfaN3E27C63tZBk6CxR8IhVr8LiRt5ij6ZBlgoZCbb726ce63JekkkLpNtQddw0A5ZBLJinCg3l9QAZDZD HTTP/1.1" 200 35
